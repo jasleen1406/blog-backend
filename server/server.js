@@ -1,32 +1,43 @@
+require("dotenv").config();
+
 const express = require("express");
+const helmet = require("helmet");
+const cors = require("cors");
+
+// routes
 const userRouter = require("./routes/user-routes");
 const blogRouter = require("./routes/blog-routes");
-const helmet = require("helmet");
+
+// DB connection
 require("./config/db");
-const cors = require("cors");
 
 const app = express();
 
+// ------------------- MIDDLEWARE -------------------
 app.use(cors());
-
-//setting helmet middleware
-app.use(helmet(
-  {
-    contentSecurityPolicy: false,
-    crossOriginEmbedderPolicy: false,
-  }
-));
-
-app.set("view engine", "ejs");
 app.use(express.json());
 
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+    crossOriginEmbedderPolicy: false,
+  })
+);
 app.use("/api/users", userRouter);
-app.use("/api/blogs", blogRouter);
+// ------------------- ROUTES -------------------
 
-app.use("/api", (req, res, next) => {
-  res.send("hello");
+// base route (health check)
+app.get("/", (req, res) => {
+  res.send("API is running 🚀");
 });
 
-//define port
+// user routes
+app.use("/api/users", userRouter);
 
-app.listen(5001, () => console.log("app started at 5001..."));
+// blog routes
+app.use("/api/blogs", blogRouter);
+
+// ------------------- SERVER -------------------
+app.listen(5001, () => {
+  console.log("app started at 5001...");
+});
