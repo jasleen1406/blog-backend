@@ -14,7 +14,7 @@ Welcome to the Blog App repository! This application is built using the MERN (Mo
 
 ## My Work
 ### Frontend
-Do check this out -https://blog-backend-f0ek.onrender.com
+Do check this out -https://blog-frontend-sable-omega.vercel.app
 ### Backend
 Do check this out -https://blog-backend-f0ek.onrender.com
 
