@@ -12,7 +12,9 @@ Welcome to the Blog App repository! This application is built using the MERN (Mo
 - **Update Blog:** Edit and update your blogs as your content evolves.
 - **View Other User Blogs:** Explore and read blogs published by other users.
 
-- My Work- https://blog-backend-d9hj.onrender.com/
+## My Work
+https://blog-backend-f0ek.onrender.com
+Do check this out
 
 ## Screenshots
 
