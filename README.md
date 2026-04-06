@@ -13,8 +13,10 @@ Welcome to the Blog App repository! This application is built using the MERN (Mo
 - **View Other User Blogs:** Explore and read blogs published by other users.
 
 ## My Work
-https://blog-backend-f0ek.onrender.com
-Do check this out
+### Frontend
+Do check this out -https://blog-backend-f0ek.onrender.com
+### Backend
+Do check this out -https://blog-backend-f0ek.onrender.com
 
 ## Screenshots
 
